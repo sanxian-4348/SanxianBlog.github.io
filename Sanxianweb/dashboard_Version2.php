@@ -37,7 +37,8 @@ $role = $_SESSION['role'];
                 <a href="edit.php">進入網頁編輯頁面</a>
             <?php endif; ?>
             <a href="view.php">瀏覽網頁內容</a>
-            <a href="login.php?logout=1" class="logout">登出</a>
+            <a href="admin.php" class="logout">登出</a>
+            <a href="index.html">Sanxain Blog</a>
         </div>
     </div>
 </body>
