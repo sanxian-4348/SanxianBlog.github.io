@@ -34,7 +34,25 @@
       object-position: center;
       display: block;
     }
-    
+    /* 黑塔GIF針對手機排版修正 */
+    .special-img {
+      max-width: 500px;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    @media (max-width: 768px) {
+      .special-img {
+        position: static !important;
+        right: auto !important;
+        top: auto !important;
+        transform: none !important;
+        display: block;
+        margin: 1em auto 0 auto;
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body class="is-preload landing">
@@ -103,7 +121,7 @@
             <div class="col-4 col-12-medium">
               <p>Hello！歡迎來到我的 Blog，這裡會分享我的網頁開發以及資訊安全、競程、電路設計等相關的學習筆記和心得。希望能夠幫助到你們，也歡迎大家一起交流學習！</p>
               <p>這個 Blog 是我在學習過程中的一個小小紀錄，希望能夠幫助到和我一樣對資訊電子有興趣的朋友</p>
-              <span class="img-box" style="max-width: 500px; position: absolute; right: 0; top: 50%; transform: translateY(-50%);">
+              <span class="img-box special-img">
                 <img src="images/IMG_1362.gif" alt="資訊電子領域學習 GIF" class="img-fit" />
               </span>
             </div>
@@ -123,7 +141,7 @@
           <h2>網頁設計</h2>
           <p>網頁設計丙級第二題</p>
         </header>
-        <p>這個網站是我覺得最耗時間、也蠻困難的一個題目想這題拿出來做紀念<//br>下面的按紐可以到我的github資料庫中看到這個網站</p>
+        <p>這個網站是我覺得最耗時間、也蠻困難的一個題目想這題拿出來做紀念<br>下面的按紐可以到我的github資料庫中看到這個網站</p>
         <ul class="actions">
           <li><a href="https://sanxian-4348.github.io/web02.github.io/web02/index.html" class="button">前往觀看網站</a></li>
         </ul>
