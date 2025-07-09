@@ -12,6 +12,22 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="shortcut icon" type="image/x-icon" href="qq.jpg" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+		/* === RWD 圖片樣式（直接加進這裡或 main.css 皆可） === */
+		.img-fit, img.responsive, img.rwd {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+		@media (max-width: 600px) {
+			.img-fit, img.responsive, img.rwd {
+				width: 100%;
+				max-width: 100%;
+				height: auto;
+			}
+		}
+		</style>
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
@@ -37,7 +53,6 @@
 											<li><a href="#">分區賽</a></li>
 											<li><a href="#">程式設計C#</a></li>
 											<li><a href="#">APCS─程式設計歷程</a></li>
-											</a></li>
 										</ul>
 									</li>
 								</ul>
