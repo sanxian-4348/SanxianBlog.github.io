@@ -103,6 +103,8 @@
         <span class="image fit main img-box">
           <img src="images/qq.jpg" alt="Sanxian 大頭照" class="img-fit" />
         </span>
+        <!-- 加入本站已運行天數顯示 -->
+        <p style="margin-top:1em;">本站已運行：<span id="site-runtime"></span></p>
       </div>
       <a href="#one" class="goto-next scrolly">Next</a>
     </section>
@@ -243,5 +245,26 @@
   <script src="assets/js/breakpoints.min.js" defer></script>
   <script src="assets/js/util.js" defer></script>
   <script src="assets/js/main.js" defer></script>
+  
+  <script>
+    
+    var siteStartTime = new Date("2024-07-01T00:00:00+08:00");
+    function updateRuntime() {
+      var now = new Date();
+      var diff = now - siteStartTime;
+      if (diff < 0) diff = 0;
+      var days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      var minutes = Math.floor((diff / (1000 * 60)) % 60);
+      var seconds = Math.floor((diff / 1000) % 60);
+      document.getElementById("site-runtime").innerText =
+        days + " 天 " +
+        hours + " 小時 " +
+        minutes + " 分 " +
+        seconds + " 秒";
+    }
+    updateRuntime();
+    setInterval(updateRuntime, 1000);
+  </script>
 </body>
 </html>
